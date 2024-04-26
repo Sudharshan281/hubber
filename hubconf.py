@@ -3,6 +3,14 @@ import torch
 from torch import nn
 import torch.optim as optim
 
+
+from sklearn.datasets import make_blobs, make_circles, load_digits
+from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN, Birch
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+import pandas as pd
+
 # You can import whatever standard packages are required
 
 # full sklearn, full pytorch, pandas, matplotlib, numpy are all available
@@ -12,10 +20,10 @@ import torch.optim as optim
 ###### PART 1 ######
 
 def get_data_blobs(n_points=100):
-  pass
+  # pass
   # write your code here
   # Refer to sklearn data sets
-  X, y = None
+  X, y = make_blobs(100)
   # write your code ...
   return X,y
 
@@ -201,6 +209,5 @@ def train_combined_encdec_predictor(mynn=None,X,y, epochs=11):
   
   
   
-
 
 
